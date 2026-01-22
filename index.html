@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ambica A Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+}
+
+/* Top Section */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #1f3c88;
+    color: white;
+}
+
+.left-profile {
+    display: flex;
+    align-items: center;
+}
+
+.left-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Remove links for email/phone */
+.left-profile p {
+    margin: 5px 0 0 0;
+}
+
+.buttons button {
+    margin-left: 10px;
+    padding: 10px 16px;
+    border: none;
+    background: #ffdd57;
+    color: #1f3c88;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons button:hover {
+    background: #ffc107;
+}
+
+/* Center Content */
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1f3c88;
+    color: white;
+}
+</style>
+
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+
+    <!-- LEFT SIDE -->
+    <div class="left-profile">
+        <img src="profile.jpg.jpeg" alt="Profile Photo">
+        <div>
+            <h2>AMBICA A</h2>
+            <p>
+                lakshmishree318@gmail.com<br>
+                9902825416
+            </p>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE BUTTONS -->
+    <div class="buttons">
+        <button onclick="showSection('education')">Education</button>
+        <button onclick="showSection('internship')">Internship</button>
+        <button onclick="showSection('certificate')">Certificate</button>
+        <button onclick="showSection('strength')">Strength</button>
+        <button onclick="showSection('project')">Project</button>
+    </div>
+
+</div>
+
+<!-- CENTER CONTENT -->
+<div class="content">
+
+    <div id="education" class="section active">
+        <h2>Education</h2>
+        <p><b>Bachelor of Computer Application (BCA)</b><br>
+        Indus Valley Degree College – Bangalore North University, Karnataka<br>
+        Pursuing Final Year (5th Semester)</p>
+
+        <p><b>Pre University</b><br>
+        Indus Valley PU College – 78%</p>
+
+        <p><b>SSLC</b><br>
+        Christ Global Residential School – 60%</p>
+    </div>
+
+    <div id="internship" class="section">
+        <h2>Internship</h2>
+        <p>Fresher</p>
+    </div>
+
+    <div id="certificate" class="section">
+        <h2>Certificates</h2>
+        <p>Details will be added.</p>
+    </div>
+
+    <div id="strength" class="section">
+        <h2>Strengths</h2>
+        <ul>
+            <li>Good communication skills</li>
+            <li>Positive thinking</li>
+            <li>Quick learner and hard working</li>
+            <li>Well disciplined</li>
+        </ul>
+    </div>
+
+    <div id="project" class="section">
+        <h2>Projects</h2>
+        <p>Academic projects will be added.</p>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 IMTDA Private Infotech Limited
+</footer>
+
+</body>
+</html>
